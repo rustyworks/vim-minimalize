@@ -14,12 +14,21 @@
 
 "Supertab code completion"
   Bundle "ervandew/supertab.git"
+  " This much faster than contextDiscover
+  let g:SuperTabCompletionContexts = ['s:ContextText']
+  " let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
   let g:SuperTabContextDefaultCompletionType = "<c-n>"
 
 " CtrlP
   Bundle "ctrlpvim/ctrlp.vim"
     nnoremap <Leader>b :<C-U>CtrlPBuffer<CR>
     nnoremap <Leader>t :<C-U>CtrlP<CR>
+    " To enable copy paste using ctrl+v
+    let g:ctrlp_prompt_mappings = {
+          \ 'PrtInsert("c")':       ['<MiddleMouse>', '<insert>', '<c-v>'],
+          \ }
+    nmap <Leader>v :<C-U>CtrlP<CR><insert>
+
     let g:ctrlp_switch_buffer = 0
     let g:ctrlp_working_path_mode = 0
     let g:ctrlp_user_command = {
