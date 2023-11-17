@@ -5,3 +5,6 @@
 
 " Stop mouse support
   :command DisableMouse au BufEnter * set mouse=
+
+" Ensure save when we mistyped
+  :command W w
