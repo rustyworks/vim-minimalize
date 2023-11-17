@@ -53,7 +53,7 @@ hi StatusLine      guifg=#ff8ff8    guibg=#f8f8f8    gui=NONE
 hi StatusLineNC    guifg=#f8f8f8    guibg=#616060    gui=NONE
 hi WildMenu        guifg=#ff8ff8    guibg=#616060    gui=NONE
 hi Question        guifg=#404040    guibg=#616060    gui=NONE
-" hi Title           guifg=#f8f8f8    guibg=#ff8ff8    gui=NONE
+hi Title           guifg=#f8f8f8    guibg=#616060    gui=NONE
 hi ModeMsg         guifg=#404040    guibg=#616060    gui=NONE
 hi MoreMsg         guifg=#ff8ff8    guibg=#616060    gui=NONE
 
