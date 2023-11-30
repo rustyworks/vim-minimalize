@@ -16,6 +16,7 @@
   Bundle "ervandew/supertab.git"
   " This much faster than contextDiscover
   let g:SuperTabCompletionContexts = ['s:ContextText']
+  let g:SuperTabContextTextOmniPrecedence = ['&omnifunc']
   " let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
   let g:SuperTabContextDefaultCompletionType = "<c-n>"
 
