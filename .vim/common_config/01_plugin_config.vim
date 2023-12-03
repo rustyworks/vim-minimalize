@@ -7,6 +7,8 @@
   Bundle "tomtom/tcomment_vim.git"
   Bundle "tpope/vim-fugitive.git"
   Bundle "Vimjas/vim-python-pep8-indent"
+  Bundle "leafgarland/typescript-vim"
+  Bundle "peitalin/vim-jsx-typescript"
 
 " Set autopair only on braces. Exclude all quotes.
   Bundle "jiangmiao/auto-pairs"
