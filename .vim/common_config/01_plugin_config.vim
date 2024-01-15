@@ -8,7 +8,6 @@
   Bundle "tpope/vim-fugitive.git"
   Bundle "Vimjas/vim-python-pep8-indent"
   Bundle "leafgarland/typescript-vim"
-  Bundle "peitalin/vim-jsx-typescript"
 
 " Set autopair only on braces. Exclude all quotes.
   Bundle "jiangmiao/auto-pairs"
@@ -79,3 +78,7 @@
       set undodir=~/.undodir/
       " set undofile
     endif
+
+" Make js, ts, jsx, tsx to typescriptreact
+  Bundle "peitalin/vim-jsx-typescript"
+  autocmd BufNewFile,BufRead *.js,*.ts,*.tsx,*.jsx set filetype=typescriptreact
