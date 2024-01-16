@@ -36,6 +36,9 @@
 " clean up trailing whitespace
   map <Leader>c :StripTrailingWhitespaces<cr>
 
+" clean up carriage return (for wsl)
+  map <Leader>C :StripTrailingCarriageReturn<cr>
+
 " compress excess whitespace on current line
   map <Leader>e :s/\v(\S+)\s+/\1 /<cr>:nohl<cr>
 
