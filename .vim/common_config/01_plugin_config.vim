@@ -8,6 +8,7 @@
   Bundle "tpope/vim-fugitive.git"
   Bundle "Vimjas/vim-python-pep8-indent"
   Bundle "leafgarland/typescript-vim"
+  Bundle "vim-scripts/matchit.zip"
 
 " Set autopair only on braces. Exclude all quotes.
   Bundle "jiangmiao/auto-pairs"
