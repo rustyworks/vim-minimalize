@@ -14,6 +14,9 @@
   Bundle "jiangmiao/auto-pairs"
   let g:AutoPairs = {'(':')', '[':']', '{':'}'}
 
+  Bundle 'dracula/vim', { 'name': 'dracula' }
+  let g:dracula_italic = 0
+
 "Supertab code completion"
   Bundle "ervandew/supertab.git"
   " This much faster than contextDiscover
