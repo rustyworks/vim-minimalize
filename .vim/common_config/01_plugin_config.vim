@@ -10,6 +10,11 @@
   Bundle "leafgarland/typescript-vim"
   Bundle "vim-scripts/matchit.zip"
 
+" Sticky context scroll
+  Bundle "wellle/context.vim"
+  let g:context_enabled = 1
+  let g:context_filetype_blacklist = []
+
 " Set autopair only on braces. Exclude all quotes.
   Bundle "jiangmiao/auto-pairs"
   let g:AutoPairs = {'(':')', '[':']', '{':'}'}
