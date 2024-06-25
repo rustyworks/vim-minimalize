@@ -54,26 +54,26 @@ hi StatusLineNC    guifg=#f8f8f8    guibg=#616060    gui=NONE
 hi WildMenu        guifg=#ff8ff8    guibg=#616060    gui=NONE
 hi Question        guifg=#404040    guibg=#616060    gui=NONE
 hi Title           guifg=#f8f8f8    guibg=#616060    gui=NONE
-hi ModeMsg         guifg=#404040    guibg=#616060    gui=NONE
-hi MoreMsg         guifg=#ff8ff8    guibg=#616060    gui=NONE
+hi ModeMsg         guifg=#f8f8f8    guibg=#616060    gui=NONE
+hi MoreMsg         guifg=#f8f8f8    guibg=#616060    gui=NONE
 
 " --------------
 " - Visual aid -
 " --------------
-hi MatchParen      guifg=#ff8ff8    guibg=NONE    gui=NONE
+hi MatchParen      guifg=#f8f8f8    guibg=NONE       gui=NONE    cterm=underline
 hi Visual          guifg=#f8f8f8    guibg=#404040    gui=NONE
 hi VisualNOS       guifg=#f8f8f8    guibg=#404040    gui=NONE
-hi NonText         guifg=#616060    guibg=#616060    gui=NONE
+hi NonText         guifg=#f8f8f8    guibg=#616060    gui=NONE
 
-hi Todo            guifg=#f8f8f8    guibg=#616060    gui=NONE
+hi Todo            guifg=#8f8f8f    guibg=#f8f8f8    gui=NONE
 hi Underlined      guifg=#f8f8f8    guibg=#616060    gui=NONE
-hi Error           guifg=#404040    guibg=#616060    gui=NONE
-hi ErrorMsg        guifg=#404040    guibg=#616060    gui=NONE
-hi WarningMsg      guifg=#404040    guibg=#616060    gui=NONE
-hi Ignore          guifg=#404040    guibg=#616060    gui=NONE
-hi SpecialKey      guifg=#404040    guibg=#616060    gui=NONE
-hi WhiteSpaceChar  guifg=#404040    guibg=#616060    gui=NONE
-hi WhiteSpace      guifg=#404040    guibg=#616060    gui=NONE
+hi Error           guifg=#ff8ff8    guibg=#616060    gui=NONE
+hi ErrorMsg        guifg=#ff8ff8    guibg=#616060    gui=NONE
+hi WarningMsg      guifg=#f8f8f8    guibg=#616060    gui=NONE
+hi Ignore          guifg=#f8f8f8    guibg=#616060    gui=NONE
+hi SpecialKey      guifg=#f8f8f8    guibg=#616060    gui=NONE
+hi WhiteSpaceChar  guifg=#f8f8f8    guibg=#616060    gui=NONE
+hi WhiteSpace      guifg=#f8f8f8    guibg=#616060    gui=NONE
 
 " --------------------------------
 " Variable types
@@ -141,7 +141,7 @@ hi PmenuThumb      guifg=#8f8f8f    guibg=#616060    gui=NONE
 " --------------------------------
 " Spelling
 " --------------------------------
-hi SpellBad        guifg=#ff8ff8    guibg=#616060    gui=NONE
-hi SpellCap        guifg=#f8f8f8    guibg=#616060    gui=NONE
-hi SpellLocal      guifg=#f8f8f8    guibg=#616060    gui=NONE
-hi SpellRare       guifg=#f8f8f8    guibg=#616060    gui=NONE
+hi SpellBad        guifg=#ff8ff8    guibg=NONE       gui=NONE
+hi SpellCap        guifg=NONE       guibg=NONE       gui=NONE
+hi SpellLocal      guifg=NONE       guibg=NONE       gui=NONE
+hi SpellRare       guifg=NONE       guibg=NONE       gui=NONE
