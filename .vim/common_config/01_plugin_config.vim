@@ -15,11 +15,13 @@
   let g:context_enabled = 1
   let g:context_filetype_blacklist = []
 
-" Set autopair only on braces. Exclude all quotes.
+" Autopairs
   Bundle "jiangmiao/auto-pairs"
-  let g:AutoPairs = {'(':')', '[':']', '{':'}'}
+  " let g:AutoPairs = {'(':')', '[':']', '{':'}'}
+  let g:AutoPairsOnlyWhitespace = 1  " https://github.com/jiangmiao/auto-pairs/pull/120/files
 
-  Bundle 'dracula/vim', { 'name': 'dracula' }
+" Themes
+  Bundle "dracula/vim", { 'name': 'dracula' }
   let g:dracula_italic = 0
 
 "Supertab code completion"

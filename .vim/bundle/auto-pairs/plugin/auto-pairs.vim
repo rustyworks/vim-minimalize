@@ -100,6 +100,9 @@ if !exists('g:AutoPairsSmartQuotes')
   let g:AutoPairsSmartQuotes = 1
 endif
 
+if !exists('g:AutoPairsOnlyWhitespace')
+  let g:AutoPairsOnlyWhitespace = 0
+end
 " 7.4.849 support <C-G>U to avoid breaking '.'
 " Issue talk: https://github.com/jiangmiao/auto-pairs/issues/3
 " Vim note: https://github.com/vim/vim/releases/tag/v7.4.849
@@ -209,16 +212,28 @@ func! AutoPairsInsert(key)
     return a:key
   end
 
+  if g:AutoPairsOnlyWhitespace && after =~ '\v\S' && !empty(afterline)
+    let is_pair = 0
+    for [open, close, opt] in b:AutoPairsList
+      if close ==# afterline[0]
+        let is_pair = 1
+      end
+    endfor
+    if is_pair == 0
+      return a:key
+    end
+  endif
+
   " check open pairs
   for [open, close, opt] in b:AutoPairsList
     let ms = s:matchend(before.a:key, open)
     let m = matchstr(afterline, '^\v\s*\zs\V'.close)
     if len(ms) > 0
       " process the open pair
-      
+
       " remove inserted pair
-      " eg: if the pairs include < > and  <!-- --> 
-      " when <!-- is detected the inserted pair < > should be clean up 
+      " eg: if the pairs include < > and  <!-- -->
+      " when <!-- is detected the inserted pair < > should be clean up
       let target = ms[1]
       let openPair = ms[2]
       if len(openPair) == 1 && m == openPair
@@ -499,7 +514,7 @@ func! AutoPairsInit()
       let opt['multiline'] = 0
     end
     let m = matchlist(close, '\v(.*)//(.*)$')
-    if len(m) > 0 
+    if len(m) > 0
       if m[2] =~ 'n'
         let opt['mapclose'] = 0
       end
