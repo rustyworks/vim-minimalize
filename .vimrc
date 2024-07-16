@@ -18,10 +18,7 @@ if &term =~# '^screen'
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
 
-set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
-
 if has('clipboard')
-  " set clipboard=unnamedplus
   set clipboard=unnamed
 endif
 
@@ -55,4 +52,3 @@ if uname == 'Linux'
 endif
 
 colorscheme ff8
-" colorscheme dracula

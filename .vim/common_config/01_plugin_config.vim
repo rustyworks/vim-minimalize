@@ -3,11 +3,11 @@
  call vundle#rc()
 
 " Plugins requiring no additional configuration or keymaps
+  Bundle "Vimjas/vim-python-pep8-indent"
+  Bundle "leafgarland/typescript-vim"
   Bundle "terryma/vim-multiple-cursors"
   Bundle "tomtom/tcomment_vim.git"
   Bundle "tpope/vim-fugitive.git"
-  Bundle "Vimjas/vim-python-pep8-indent"
-  Bundle "leafgarland/typescript-vim"
   Bundle "vim-scripts/matchit.zip"
 
 " Sticky context scroll
@@ -19,10 +19,6 @@
   Bundle "jiangmiao/auto-pairs"
   " let g:AutoPairs = {'(':')', '[':']', '{':'}'}
   let g:AutoPairsOnlyWhitespace = 1  " https://github.com/jiangmiao/auto-pairs/pull/120/files
-
-" Themes
-  Bundle "dracula/vim", { 'name': 'dracula' }
-  let g:dracula_italic = 0
 
 "Supertab code completion"
   Bundle "ervandew/supertab.git"
