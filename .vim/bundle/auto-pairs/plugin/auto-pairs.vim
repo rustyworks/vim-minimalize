@@ -215,7 +215,9 @@ func! AutoPairsInsert(key)
   if g:AutoPairsOnlyWhitespace && after =~ '\v\S' && !empty(afterline)
     let is_pair = 0
     for [open, close, opt] in b:AutoPairsList
-      if close ==# afterline[0]
+      " This preventing add closing bracket on this scenario [ | ]
+      let afterline_checker = substitute(afterline, '^\s\+', '', 'g')
+      if close ==# afterline_checker[0]
         let is_pair = 1
       end
     endfor
