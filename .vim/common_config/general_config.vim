@@ -111,3 +111,7 @@
 
 " for git, add spell checking and automatic wrapping at 72 columns
   au Filetype gitcommit setlocal spell textwidth=72
+
+" Auto complete without any plugins
+" https://linuxhandbook.com/vim-auto-complete/
+  set omnifunc=syntaxcomplete#Complete

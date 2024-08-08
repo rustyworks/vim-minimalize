@@ -71,3 +71,6 @@
 
 " toggle spell checker
   nmap <Leader>s :set spell!<cr>
+
+" triggering auto complete while pressing tab on local file context
+  inoremap <tab> <C-x><C-n>

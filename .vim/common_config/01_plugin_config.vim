@@ -20,14 +20,6 @@
   " let g:AutoPairs = {'(':')', '[':']', '{':'}'}
   let g:AutoPairsOnlyWhitespace = 1  " https://github.com/jiangmiao/auto-pairs/pull/120/files
 
-"Supertab code completion"
-  Bundle "ervandew/supertab.git"
-  " This much faster than contextDiscover
-  let g:SuperTabCompletionContexts = ['s:ContextText']
-  let g:SuperTabContextTextOmniPrecedence = ['&omnifunc']
-  " let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
-  let g:SuperTabContextDefaultCompletionType = "<c-n>"
-
 " Tagbar for navigation by tags using CTags
   Bundle "majutsushi/tagbar.git"
     let g:tagbar_autofocus = 1
