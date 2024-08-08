@@ -28,6 +28,14 @@
   " let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
   let g:SuperTabContextDefaultCompletionType = "<c-n>"
 
+" Tagbar for navigation by tags using CTags
+  Bundle "majutsushi/tagbar.git"
+    let g:tagbar_autofocus = 1
+    map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
+    map <Leader>. :TagbarToggle<CR>
+    " to prevent sorting by alphabetically
+    let g:tagbar_sort = 0
+
 " CtrlP
   Bundle "ctrlpvim/ctrlp.vim"
     nnoremap <Leader>b :<C-U>CtrlPBuffer<CR>
