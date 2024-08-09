@@ -33,3 +33,21 @@ function! <SID>CopyCurrentFilePath()
   let @+=@%
 endfunction
 command! CopyCurrentFilePath call <SID>CopyCurrentFilePath()
+
+function! ContextCompletion()
+    let l:line_content = getline('.')
+    if len(trim(l:line_content)) > 0
+        return "\<C-n>"
+    else
+        return "\<Tab>"
+    endif
+endfunction
+
+function! ReversedContextCompletion()
+    let l:line_content = getline('.')
+    if len(trim(l:line_content)) > 0
+        return "\<C-p>"
+    else
+        return "\<Tab>"
+    endif
+endfunction
