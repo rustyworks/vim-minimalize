@@ -133,8 +133,8 @@ hi DiffText        guifg=#f8f8f8    guibg=#616060    gui=NONE
 " --------------------------------
 " Completion menu
 " --------------------------------
-hi Pmenu           guifg=#8f8f8f    guibg=#616060    gui=NONE
-hi PmenuSel        guifg=#8f8f8f    guibg=#616060    gui=NONE
+hi Pmenu           guifg=#8f8f8f    guibg=#404040    gui=NONE
+hi PmenuSel        guifg=#f8f8f8    guibg=#ff8ff8    gui=NONE
 hi PmenuSbar       guifg=#8f8f8f    guibg=#616060    gui=NONE
 hi PmenuThumb      guifg=#8f8f8f    guibg=#616060    gui=NONE
 
