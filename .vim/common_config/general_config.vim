@@ -115,3 +115,7 @@
 " Auto complete without any plugins
 " https://linuxhandbook.com/vim-auto-complete/
   set omnifunc=syntaxcomplete#Complete
+
+" Prevent loading on all included files when doing auto complete
+" https://vi.stackexchange.com/questions/11349/ctrl-n-completion-takes-a-long-time-for-scanning-included-file
+  setglobal complete=.,w,b,t
