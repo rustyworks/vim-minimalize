@@ -29,8 +29,19 @@ endfunction
 command! StripTrailingCarriageReturn call <SID>StripTrailingCarriageReturn()
 
 
+" Copy current file path
+" https://vi.stackexchange.com/questions/3686/copy-the-full-path-of-current-buffer-to-clipboard
+" https://stackoverflow.com/questions/916875/yank-file-name-path-of-current-buffer-in-vim
 function! <SID>CopyCurrentFilePath()
-  let @+=@%
+  let uname = substitute(system('uname'),'\n','','')
+  if uname == 'Linux'
+    let lines = readfile("/proc/version")
+    if lines[0] =~ "Microsoft"
+      call system('win32yank.exe -i --crlf', expand('%'))
+    else
+      let @+ = expand('%')
+    endif
+  endif
 endfunction
 command! CopyCurrentFilePath call <SID>CopyCurrentFilePath()
 
