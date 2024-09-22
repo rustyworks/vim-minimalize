@@ -75,3 +75,6 @@
 " triggering auto complete while pressing tab on local file context
   inoremap <Tab> <C-R>=ContextCompletion()<CR>
   inoremap <S-Tab> <C-R>=ReversedContextCompletion()<CR>
+
+" toggle fold (check general config fold)
+  nmap <Leader>z :ToggleFolding<cr>

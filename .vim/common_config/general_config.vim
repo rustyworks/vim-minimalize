@@ -121,3 +121,10 @@
   setglobal complete=.,w,b
 " Don't use tag and included file
   set complete-=t,i
+
+" Add easy folding
+" https://unix.stackexchange.com/questions/141097/how-to-enable-and-use-code-folding-in-vim/336537#336537
+  set foldmethod=indent
+  set foldnestmax=2
+  set nofoldenable
+  set foldlevel=0
