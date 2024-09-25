@@ -15,6 +15,12 @@
   let g:context_enabled = 1
   let g:context_filetype_blacklist = []
 
+" Alternative colorscheme
+  Bundle "dracula/vim", { "name": "dracula" }
+  let g:dracula_bold = 0
+  let g:dracula_italic = 0
+  let g:dracula_underline = 0
+
 " Autopairs
   Bundle "jiangmiao/auto-pairs"
   " let g:AutoPairs = {'(':')', '[':']', '{':'}'}
