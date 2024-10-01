@@ -70,18 +70,20 @@ function! ReversedContextCompletion()
 endfunction
 
 function! <SID>ToggleFolding()
-  if !exists("g:fold_all")
-      let g:fold_all = 0
+  if !exists("b:fold_all")
+      let b:fold_all = 0
   endif
 
-  if g:fold_all == 0
-    let g:fold_all = 1
+  if b:fold_all == 0
+    let b:fold_all = 1
     execute "normal! zM"
     echo "All folds closed."
   else
-    let g:fold_all = 0
+    let b:fold_all = 0
     execute "normal! zR"
     echo "All folds opened."
   endif
+
+  echo b:fold_all
 endfunction
 command! ToggleFolding call <SID>ToggleFolding()
