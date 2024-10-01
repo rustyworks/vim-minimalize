@@ -19,36 +19,8 @@ if &term =~# '^screen'
 endif
 
 if has('clipboard')
-  set clipboard=unnamed
-endif
-
-" Check whether inside WSL or not
-" https://stackoverflow.com/a/57015339
-let uname = substitute(system('uname'),'\n','','')
-if uname == 'Linux'
-  let lines = readfile("/proc/version")
-  if lines[0] =~ "Microsoft"
-    " WSL yank support 1st approach
-    " https://superuser.com/a/1557751
-    " let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
-    " if executable(s:clip)
-    "   set ff=unix
-    "   augroup WSLYank
-    "     autocmd!
-    "     autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
-    "   augroup END
-    " endif
-
-    " WSL yank support 2nd approach
-    " https://stackoverflow.com/a/61864749
-    autocmd TextYankPost * call system('win32yank.exe -i --crlf', @")
-    function! Paste(mode)
-      let @" = system('win32yank.exe -o --lf')
-      return a:mode
-    endfunction
-    map <expr> p Paste('p')
-    map <expr> P Paste('P')
-  endif
+  " Should install xclip or wl-clipboard
+  set clipboard=unnamed,unnamedplus
 endif
 
 colorscheme ff8
