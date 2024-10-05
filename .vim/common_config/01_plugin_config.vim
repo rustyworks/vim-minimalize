@@ -95,3 +95,7 @@
 " Make js, ts, jsx, tsx to typescriptreact
   Bundle "peitalin/vim-jsx-typescript"
   autocmd BufNewFile,BufRead *.js,*.ts,*.tsx,*.jsx set filetype=typescriptreact
+
+" Make all html, htm, nunjucks, nunjs, njk into jinja
+  Bundle "Glench/Vim-Jinja2-Syntax"
+  autocmd BufNewFile,BufRead *.html,*.htm,*.nunjucks,*.nunjs,*.njk set filetype=jinja.html
