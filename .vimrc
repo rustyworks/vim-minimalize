@@ -18,6 +18,19 @@ if &term =~# '^screen'
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
 
+" Change cursor shape in vim
+"https://stackoverflow.com/questions/6488683/how-to-change-the-cursor-between-normal-and-insert-modes-in-vim
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+augroup myCmds
+  au!
+  autocmd VimEnter * silent !echo -ne "\e[2 q"
+augroup END
+" This make draw cursor shape faster
+set ttimeout
+set ttimeoutlen=1
+set ttyfast
+
 if has('clipboard')
   " Should install xclip or wl-clipboard
   set clipboard=unnamed,unnamedplus
