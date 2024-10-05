@@ -49,8 +49,9 @@ function! ContextCompletion()
   let l:line_content = getline('.')
   let l:col = col('.')
   let l:prev_char = l:line_content[l:col - 2]
+  let l:next_char = l:line_content[l:col - 1]
 
-  if len(trim(l:line_content)) > 0 && matchstr(l:prev_char, '\s') == ''
+  if len(trim(l:line_content)) > 0 && (matchstr(l:prev_char, '\s') == '' && (l:next_char == '' || l:next_char == ' '))
     return "\<C-p>"
   else
     return "\<Tab>"
@@ -61,8 +62,9 @@ function! ReversedContextCompletion()
   let l:line_content = getline('.')
   let l:col = col('.')
   let l:prev_char = l:line_content[l:col - 2]
+  let l:next_char = l:line_content[l:col - 1]
 
-  if len(trim(l:line_content)) > 0 && matchstr(l:prev_char, '\s') == ''
+  if len(trim(l:line_content)) > 0 && (matchstr(l:prev_char, '\s') == '' && (l:next_char == '' || l:next_char == ' '))
     return "\<C-n>"
   else
     return "\<Tab>"
