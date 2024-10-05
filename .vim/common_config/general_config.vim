@@ -88,8 +88,8 @@
   set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
   set list
 
-" have the mouse enabled all the time
-  set mouse=a
+" have the mouse disabled all the time
+  set mouse=
 
 " use tab-complete to see a list of possiblities when entering commands
   set wildmode=list:longest,full
