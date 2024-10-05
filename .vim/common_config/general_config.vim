@@ -97,9 +97,6 @@
 " allow lots of tabs
   set tabpagemax=20
 
-" Enable cursor line position tracking:
-  set cursorline
-
 " remember last position in file
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
 
