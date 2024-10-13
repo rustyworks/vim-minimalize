@@ -19,3 +19,16 @@ if has('clipboard')
   " Should install xclip or wl-clipboard first
   set clipboard=unnamed,unnamedplus
 endif
+
+" Enhance python number highlighting for vim < 9.0
+" https://vi.stackexchange.com/questions/40124/how-to-get-neovim-to-highlight-underscore-numbers-like-normal-numbers
+if &filetype == 'python' && !exists("python_no_number_highlight")
+  " https://github.com/vim/vim/blob/master/runtime/syntax/python.vim
+  autocmd Syntax python syn match pythonNumber "\<0[xX]\%(_\=\x\)\+\>"
+  autocmd Syntax python syn match pythonNumber "\<0[bB]\%(_\=[01]\)\+\>"
+  autocmd Syntax python syn match pythonNumber "\<\%([1-9]\%(_\=\d\)*\|0\+\%(_\=0\)*\)\>"
+  autocmd Syntax python syn match pythonNumber "\<\d\%(_\=\d\)*[jJ]\>"
+  autocmd Syntax python syn match pythonNumber "\<\d\%(_\=\d\)*[eE][+-]\=\d\%(_\=\d\)*[jJ]\=\>"
+  autocmd Syntax python syn match pythonNumber "\<\d\%(_\=\d\)*\.\%([eE][+-]\=\d\%(_\=\d\)*\)\=[jJ]\=\%(\W\|$\)\@="
+  autocmd Syntax python syn match pythonNumber "\%(^\|\W\)\zs\%(\d\%(_\=\d\)*\)\=\.\d\%(_\=\d\)*\%([eE][+-]\=\d\%(_\=\d\)*\)\=[jJ]\=\>"
+end
