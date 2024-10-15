@@ -79,11 +79,9 @@ function! <SID>ToggleFolding()
   if b:fold_all == 0
     let b:fold_all = 1
     execute "normal! zM"
-    echo "All folds closed."
   else
     let b:fold_all = 0
     execute "normal! zR"
-    echo "All folds opened."
   endif
 
   echo b:fold_all
