@@ -81,6 +81,7 @@ if s:Enabled('g:python_highlight_class_vars')
 endif
 syn keyword pythonRepeat        for while
 syn keyword pythonConditional   if elif else
+syn keyword pythonMatch         match case
 syn keyword pythonException     try except finally
 " The standard pyrex.vim unconditionally removes the pythonInclude group, so
 " we provide a dummy group here to avoid crashing pyrex.vim.
@@ -105,7 +106,7 @@ else
     syn match   pythonStatement   '\<async\s\+def\>' nextgroup=pythonFunction skipwhite
     syn match   pythonStatement   '\<async\s\+with\>'
     syn match   pythonStatement   '\<async\s\+for\>'
-    syn cluster pythonExpression contains=pythonStatement,pythonRepeat,pythonConditional,pythonOperator,pythonNumber,pythonHexNumber,pythonOctNumber,pythonBinNumber,pythonFloat,pythonString,pythonFString,pythonRawString,pythonRawFString,pythonBytes,pythonBoolean,pythonNone,pythonSingleton,pythonBuiltinObj,pythonBuiltinFunc,pythonBuiltinType,pythonClassVar
+    syn cluster pythonExpression contains=pythonStatement,pythonRepeat,pythonConditional,pythonMatch,pythonOperator,pythonNumber,pythonHexNumber,pythonOctNumber,pythonBinNumber,pythonFloat,pythonString,pythonFString,pythonRawString,pythonRawFString,pythonBytes,pythonBoolean,pythonNone,pythonSingleton,pythonBuiltinObj,pythonBuiltinFunc,pythonBuiltinType,pythonClassVar
 endif
 
 
@@ -431,9 +432,10 @@ if v:version >= 508 || !exists('did_python_syn_inits')
     HiLink pythonStatement        Statement
     HiLink pythonRaiseFromStatement   Statement
     HiLink pythonImport           Include
-    HiLink pythonFunction         Function
+    HiLink pythonFunction         Constant  " from Function
     HiLink pythonFunctionCall     Function
     HiLink pythonConditional      Conditional
+    HiLink pythonMatch            Conditional
     HiLink pythonRepeat           Repeat
     HiLink pythonException        Exception
     HiLink pythonOperator         Operator
@@ -501,7 +503,7 @@ if v:version >= 508 || !exists('did_python_syn_inits')
     HiLink pythonBuiltinType      Structure
 
     HiLink pythonExClass          Structure
-    HiLink pythonClass            Structure
+    HiLink pythonClass            Constant  " from Structure
     HiLink pythonClassVar         Identifier
 
     delcommand HiLink

@@ -45,6 +45,9 @@ await
 async def Test
 async with
 async for
+match A:
+    case 1:
+        pass
 
 # Builtin objects.
 
