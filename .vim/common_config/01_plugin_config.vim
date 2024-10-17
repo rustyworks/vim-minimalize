@@ -92,6 +92,10 @@
       " set undofile
     endif
 
+" Better syntax highlighting for Python
+  Bundle "vim-python/python-syntax"
+  let g:python_highlight_all = 1
+
 " Make js, ts, jsx, tsx to typescriptreact
   Bundle "peitalin/vim-jsx-typescript"
   autocmd BufNewFile,BufRead *.js,*.ts,*.tsx,*.jsx set filetype=typescriptreact
