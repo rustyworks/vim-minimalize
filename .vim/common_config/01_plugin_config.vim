@@ -95,6 +95,10 @@
 " Better syntax highlighting for Python
   Bundle "vim-python/python-syntax"
   let g:python_highlight_all = 1
+  " Need to do workaround for it
+  let g:python_highlight_type_annotations = 1
+  let g:python_highlight_func_calls = 1
+  let g:python_highlight_type_annotations_regex = 0
 
 " Make js, ts, jsx, tsx to typescriptreact
   Bundle "peitalin/vim-jsx-typescript"

@@ -52,6 +52,7 @@ if s:Enabled('g:python_highlight_all')
     call s:EnableByDefault('g:python_highlight_func_calls')
     call s:EnableByDefault('g:python_highlight_class_vars')
     call s:EnableByDefault('g:python_highlight_operators')
+    call s:EnableByDefault("g:python_highlight_type_annotations")
 endif
 
 if s:Enabled('g:python_highlight_builtins')
@@ -65,7 +66,7 @@ endif
 "
 
 if s:Enabled('g:python_highlight_func_calls')
-    syn match pythonFunctionCall '\%([^[:cntrl:][:space:][:punct:][:digit:]]\|_\)\%([^[:cntrl:][:punct:][:space:]]\|_\)*\ze\%(\s*(\)'
+    syn match pythonFunctionCall '\%([^[:cntrl:][:space:][:punct:][:digit:]]\|_\)\%([^[:cntrl:][:punct:][:space:]]\|_\)*\ze\%(\s*(\)' display
 endif
 
 "
@@ -90,6 +91,33 @@ syn keyword pythonImport        import
 syn match pythonRaiseFromStatement      '\<from\>'
 syn match pythonImport          '^\s*\zsfrom\>'
 
+if !s:Python2Syntax()
+  if s:Enabled("g:python_highlight_type_annotations")
+
+    if s:Enabled("g:python_highlight_type_annotations_regex")
+      " Ensure the Python syntax is loaded first
+      if exists("b:current_syntax")
+        finish
+      endif
+
+      " Match function argument annotations: def foo(x: dict[Any, Other])
+      syn match pythonFunctionArgumentAnnotation /(\s*\w\+\s*:\s*\w\+\(\[.*\]\)\?\s*\(,\|)\))/ contained containedin=pythonFunction
+
+      " Match variable annotations with generic types: x: dict[Any, Other]
+      syn match pythonVariableAnnotation /\w\+\s*:\s*\w\+\(\[.*\]\)\?/
+
+      " Match return type annotations: -> str
+      syn match pythonFunctionReturnType /->\s*\w\+/ contained containedin=pythonFunction
+    else
+      syn keyword pythonType Any AnyStr Callable ClassVar Tuple Union Optional Type TypeVar
+      syn keyword pythonType AbstractSet MutableSet Mapping MutableMapping Sequence MutableSequence ByteString Deque List
+      syn keyword pythonType Set FrozenSet MappingView KeysView ItemsView ValuesView Awaitable Coroutine AsyncIterable
+      syn keyword pythonType AsyncIterator ContextManager Dict DefaultDict Generator AsyncGenerator Text NamedTuple
+      syn keyword pythonType Iterable Iterator Reversible SupportsInt SupportsFloat SupportsAbs SupportsRound Container
+      syn keyword pythonType Hashable Sized Collection Final
+    end
+  endif
+endif
 
 if s:Python2Syntax()
     if !s:Enabled('g:python_print_as_function')
@@ -504,7 +532,13 @@ if v:version >= 508 || !exists('did_python_syn_inits')
 
     HiLink pythonExClass          Structure
     HiLink pythonClass            Constant  " from Structure
+
     HiLink pythonClassVar         Identifier
+
+    HiLink pythonVariableAnnotation         Type
+    HiLink pythonFunctionArgumentAnnotation Type
+    HiLink pythonFunctionReturnType         Type
+    HiLink pythonType                       Type
 
     delcommand HiLink
 endif

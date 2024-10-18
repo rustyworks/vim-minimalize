@@ -32,7 +32,8 @@ def функция
 функция()
 class Класс
 class класс
-
+def index(a: Optional[Abc,B] = "asd", b: Any = ['def', 1]) -> Any:
+    pass
 
 # Keywords: Python 2
 
