@@ -19,6 +19,9 @@
 " highlight matching brackets
   set showmatch
 
+" show cursorline
+  set cursorline
+
 " scroll the window when we get near the edge
   set scrolloff=4 sidescrolloff=10
 

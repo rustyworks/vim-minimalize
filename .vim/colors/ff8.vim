@@ -20,7 +20,7 @@ hi Normal          guifg=#f8f8f8    guibg=#616060    gui=NONE
 hi Cursor          guifg=#8f8f8f    guibg=#616060    gui=NONE
 hi CursorLine      guifg=#404040    guibg=#8f8f8f    gui=NONE    cterm=NONE
 hi LineNr          guifg=#f8f8f8    guibg=#616060    gui=NONE
-hi CursorLineNR    guifg=#ff8ff8    guibg=#616060    gui=NONE    cterm=NONE
+hi CursorLineNR    guifg=NONE       guibg=#ff8ff8    gui=NONE    cterm=NONE
 
 " -----------------
 " - Number column -
