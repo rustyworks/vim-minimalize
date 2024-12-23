@@ -32,7 +32,7 @@ hi Comment      guifg=#a5a1a6 guibg=NONE
 hi ColorColumn  guifg=NONE    guibg=#636164
 hi CursorColumn guifg=NONE    guibg=#636164
 hi CursorLine   guifg=NONE    guibg=#636164
-hi clear CursorLine  # prevent cursorline color
+" hi clear CursorLine  # prevent cursorline color
 hi CursorLineNr guifg=NONE    guibg=#ff6347
 
 hi DiffAdd     guifg=#98ff98 guibg=NONE
@@ -76,8 +76,8 @@ hi Title        guifg=#98ff98 guibg=NONE
 hi Todo         guifg=#6ab2ed guibg=NONE gui=inverse cterm=inverse
 
 hi VertSplit    guifg=#a5a1a6 guibg=#636164
-hi Visual       guifg=NONE    guibg=#636164
-hi VisualNOS    guifg=NONE    guibg=#636164
+hi Visual       guifg=NONE    guibg=#8f8f8f
+hi VisualNOS    guifg=NONE    guibg=#8f8f8f
 
 hi WarningMsg   guifg=#52494b guibg=#ffda03
 
