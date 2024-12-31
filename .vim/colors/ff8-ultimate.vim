@@ -31,9 +31,9 @@ hi WildMenu         guifg=#52494b guibg=#6ab2ed
 hi Comment      guifg=#a5a1a6 guibg=NONE
 hi ColorColumn  guifg=NONE    guibg=#636164
 hi CursorColumn guifg=NONE    guibg=#636164
-hi CursorLine   guifg=NONE    guibg=#636164
+hi CursorLine   guifg=NONE    guibg=#636164  cterm=NONE
 " hi clear CursorLine  # prevent cursorline color
-hi CursorLineNr guifg=NONE    guibg=#ff6347
+hi CursorLineNr guifg=NONE    guibg=#ff6347  cterm=NONE
 
 hi DiffAdd     guifg=#98ff98 guibg=NONE
 hi DiffAdded   guifg=#98ff98 guibg=NONE
