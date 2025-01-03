@@ -51,7 +51,7 @@ function! ContextCompletion()
   let l:prev_char = l:line_content[l:col - 2]
   let l:next_char = l:line_content[l:col - 1]
 
-  if len(trim(l:line_content)) > 0 && (matchstr(l:prev_char, '\s') == '' && (l:next_char == '' || l:next_char == ' '))
+  if len(trim(l:line_content)) > 0 && (matchstr(l:prev_char, '\s') == '' && (!matchstr(l:next_char, '\w') || l:next_char == ' '))
     return "\<C-p>"
   else
     return "\<Tab>"
@@ -64,7 +64,7 @@ function! ReversedContextCompletion()
   let l:prev_char = l:line_content[l:col - 2]
   let l:next_char = l:line_content[l:col - 1]
 
-  if len(trim(l:line_content)) > 0 && (matchstr(l:prev_char, '\s') == '' && (l:next_char == '' || l:next_char == ' '))
+  if len(trim(l:line_content)) > 0 && (matchstr(l:prev_char, '\s') == '' && (!matchstr(l:next_char, '\w') || l:next_char == ' '))
     return "\<C-n>"
   else
     return "\<Tab>"
