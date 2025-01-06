@@ -130,13 +130,15 @@
   set foldlevel=0
 
 " Change cursor shape in vim
-"https://stackoverflow.com/questions/6488683/how-to-change-the-cursor-between-normal-and-insert-modes-in-vim
+" https://stackoverflow.com/questions/6488683/how-to-change-the-cursor-between-normal-and-insert-modes-in-vim
   let &t_SI = "\e[6 q"
   let &t_EI = "\e[2 q"
-  augroup myCmds
-    au!
-    autocmd VimEnter * silent !echo -ne "\e[2 q"
-  augroup END
+
+  " reset the cursor on start (for older versions of vim, usually not required)
+  " augroup myCmds
+  "   au!
+  "   autocmd VimEnter * silent !echo -ne "\e[2 q"
+  " augroup END
 
 " This make draw cursor shape faster
   set ttimeout
