@@ -127,3 +127,9 @@ hi helpBacktick       guifg=#ff6347
 hi Conceal            guifg=#6ab2ed
 
 hi MatchParen         guifg=#ff6347 guibg=NONE
+
+" TODO: Add language specific and plugin syntax
+" For now this is the hack
+hi htmlTagName guifg=#ff6347
+hi htmlTag     guifg=#98ff98
+hi htmlEndTag  guifg=#98ff98
