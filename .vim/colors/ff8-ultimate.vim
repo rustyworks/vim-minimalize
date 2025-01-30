@@ -128,8 +128,33 @@ hi Conceal            guifg=#6ab2ed
 
 hi MatchParen         guifg=#ff6347 guibg=NONE
 
-" TODO: Add language specific and plugin syntax
-" For now this is the hack
+" Languages Specific Color
+" CSS
+hi cssAttrComma         guifg=#e7e2e5
+hi cssAttrRegion        guifg=#ff6347
+" hi cssAttributeSelector guifg=#98ff98
+hi cssBraces            guifg=#e7e2e5
+hi cssFunctionComma     guifg=#e7e2e5
+hi cssNoise             guifg=#ff6347
+" hi cssProp              guifg=#6ab2ed
+hi cssPseudoClass       guifg=#ff6347
+hi cssPseudoClassId     guifg=#98ff98
+hi cssUnitDecorators    guifg=#ff6347
+hi cssVendor            guifg=#98ff98
+
+" HTML
 hi htmlTagName guifg=#ff6347
 hi htmlTag     guifg=#98ff98
 hi htmlEndTag  guifg=#98ff98
+
+" Python
+hi pythonBuiltinObj    guifg=#6ab2ed
+hi pythonBuiltinObject guifg=#6ab2ed
+hi pythonBuiltinType   guifg=#6ab2ed
+hi pythonClassVar      guifg=#6ab2ed
+hi pythonExClass       guifg=#6ab2ed
+hi pythonNone          guifg=#6ab2ed
+hi pythonRun           guifg=#a5a1a6 guibg=NONE
+
+"/usr/share/vim/vim91/indent/html.vim
+"add p as old-tag instead of self-closing tag autowrapping for this things
