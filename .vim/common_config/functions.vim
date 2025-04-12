@@ -48,10 +48,11 @@ command! CopyCurrentFilePath call <SID>CopyCurrentFilePath()
 function! ContextCompletion()
   let l:line_content = getline('.')
   let l:col = col('.')
-  let l:prev_char = l:line_content[l:col - 2]
-  let l:next_char = l:line_content[l:col - 1]
+  " let l:prev_char = l:line_content[l:col - 2]
+  " let l:next_char = l:line_content[l:col - 1]
 
-  if len(trim(l:line_content)) > 0 && (matchstr(l:prev_char, '\s') == '' && (!matchstr(l:next_char, '\w') || l:next_char == ' '))
+  " if len(trim(l:line_content)) > 0 && (matchstr(l:prev_char, '\s') == '' && (!matchstr(l:next_char, '\w') || l:next_char == ' '))
+  if l:col > 1
     return "\<C-p>"
   else
     return "\<Tab>"
@@ -61,10 +62,11 @@ endfunction
 function! ReversedContextCompletion()
   let l:line_content = getline('.')
   let l:col = col('.')
-  let l:prev_char = l:line_content[l:col - 2]
-  let l:next_char = l:line_content[l:col - 1]
+  " let l:prev_char = l:line_content[l:col - 2]
+  " let l:next_char = l:line_content[l:col - 1]
 
-  if len(trim(l:line_content)) > 0 && (matchstr(l:prev_char, '\s') == '' && (!matchstr(l:next_char, '\w') || l:next_char == ' '))
+  " if len(trim(l:line_content)) > 0 && (matchstr(l:prev_char, '\s') == '' && (!matchstr(l:next_char, '\w') || l:next_char == ' '))
+  if l:col > 1
     return "\<C-n>"
   else
     return "\<Tab>"
