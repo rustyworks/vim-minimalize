@@ -48,28 +48,24 @@ command! CopyCurrentFilePath call <SID>CopyCurrentFilePath()
 function! ContextCompletion()
   let l:line_content = getline('.')
   let l:col = col('.')
-  " let l:prev_char = l:line_content[l:col - 2]
-  " let l:next_char = l:line_content[l:col - 1]
+  let l:prev_char = l:line_content[l:col - 2]
 
-  " if len(trim(l:line_content)) > 0 && (matchstr(l:prev_char, '\s') == '' && (!matchstr(l:next_char, '\w') || l:next_char == ' '))
-  if l:col > 1
-    return "\<C-p>"
-  else
+  if l:prev_char !~# '^[A-Za-z0-9_]$'
     return "\<Tab>"
+  else
+    return "\<C-p>"
   endif
 endfunction
 
 function! ReversedContextCompletion()
   let l:line_content = getline('.')
   let l:col = col('.')
-  " let l:prev_char = l:line_content[l:col - 2]
-  " let l:next_char = l:line_content[l:col - 1]
+  let l:prev_char = l:line_content[l:col - 2]
 
-  " if len(trim(l:line_content)) > 0 && (matchstr(l:prev_char, '\s') == '' && (!matchstr(l:next_char, '\w') || l:next_char == ' '))
-  if l:col > 1
-    return "\<C-n>"
-  else
+  if l:prev_char !~# '^[A-Za-z0-9_]$'
     return "\<Tab>"
+  else
+    return "\<C-n>"
   endif
 endfunction
 
