@@ -11,9 +11,9 @@
   Bundle "vim-scripts/matchit.zip"
 
 " Sticky context scroll
-  Bundle "wellle/context.vim"
-  let g:context_enabled = 1
-  let g:context_filetype_blacklist = []
+  " Bundle "wellle/context.vim"
+  " let g:context_enabled = 1
+  " let g:context_filetype_blacklist = []
 
 " Alternative colorscheme
   Bundle "dracula/vim", { "name": "dracula" }
