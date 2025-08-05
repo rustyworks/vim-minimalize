@@ -100,6 +100,13 @@
   let g:python_highlight_func_calls = 1
   let g:python_highlight_type_annotations_regex = 0
 
+" Distraction free
+  Bundle "junegunn/limelight.vim"
+  let g:limelight_priority = -1 "highlight search
+  let g:limelight_default_coefficient = 0.8
+  " Number of preceding/following paragraphs to include (default: 0)
+  " let g:limelight_paragraph_span = 1
+
 " Make js, ts, jsx, tsx to typescriptreact
   Bundle "peitalin/vim-jsx-typescript"
   autocmd BufNewFile,BufRead *.js,*.ts,*.tsx,*.jsx set filetype=typescriptreact

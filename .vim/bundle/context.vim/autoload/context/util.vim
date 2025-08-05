@@ -113,18 +113,18 @@ function! context#util#update_state() abort
 
     " NOTE: we need to save and restore the cursor position because setting
     " 'virtualedit' resets curswant #84
-    let cursor = getcurpos()
-    let old = [&virtualedit, &conceallevel]
-    let [&virtualedit, &conceallevel] = ['all', 0]
-    let sign_width = wincol() - virtcol('.') - number_width
-    let [&virtualedit, &conceallevel] = old
-    if match("\<C-v>", mode()) == -1
-        " Don't set cursor in visual block mode because that breaks appending, see #114
-        call setpos('.', cursor)
-    endif
+    " let cursor = getcurpos()
+    " let old = [&virtualedit, &conceallevel]
+    " let [&virtualedit, &conceallevel] = ['all', 0]
+    " let [&virtualedit, &conceallevel] = old
+    " if match("\<C-v>", mode()) == -1
+    "     " Don't set cursor in visual block mode because that breaks appending, see #114
+    "     call setpos('.', cursor)
+    " endif
 
     " NOTE: sign_width can be negative if the cursor is on the wrapped part of
     " a wrapped line. in that case ignore the value
+    let sign_width = wincol() - virtcol('.') - number_width
     if sign_width >= 0 && w:context.sign_width != sign_width
         " call context#util#echof('sign width changed', w:context.sign_width, sign_width)
         let w:context.sign_width = sign_width
