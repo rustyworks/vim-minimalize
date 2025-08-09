@@ -134,6 +134,10 @@
   let &t_SI = "\e[6 q"
   let &t_EI = "\e[2 q"
 
+" Force indentation when working on certain html tags
+" https://vi.stackexchange.com/questions/24961/why-do-only-some-tags-indent-in-html
+  let g:html_indent_inctags = 'p'
+
   " reset the cursor on start (for older versions of vim, usually not required)
   " augroup myCmds
   "   au!
