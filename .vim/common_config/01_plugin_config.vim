@@ -23,7 +23,12 @@
 
 " Autopairs
   Bundle "jiangmiao/auto-pairs"
-  let g:AutoPairs = {'(':')', '[':']', '{':'}'}
+  let g:AutoPairs = {
+        \'(':')',
+        \'[':']',
+        \'{':'}',
+        \'{%':'%}',
+        \}
   let g:AutoPairsOnlyWhitespace = 1  " https://github.com/jiangmiao/auto-pairs/pull/120/files
 
 " Tagbar for navigation by tags using CTags
