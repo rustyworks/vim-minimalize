@@ -60,6 +60,8 @@
           \        '.git',
           \        'cd %s &&
           \         git ls-files . -co --exclude-standard
+          \         | grep -Ev ''\.(o|obj|pyc|class|so|dll|exe|jpg|jpeg|png|gif|bmp|svg|ico|zip|tar\.gz|tar\.bz2|rar|7z|gz|bz2|swp|swo|log|out|DS_Store)$''
+          \         | grep -Ev ''(^|/)(\.git|\.hg|\.svn|node_modules|venv|__pycache__)(/|$)''
           \         | awk ''{ print length, $0 }''
           \         | sort -n -s
           \         | cut -d" " -f2-'
