@@ -51,6 +51,9 @@
 
     let g:ctrlp_switch_buffer = 0
     let g:ctrlp_working_path_mode = 0
+    let g:ctrlp_clear_cache_on_exit = 1
+    let g:ctrlp_cache_dir = '/tmp/ctrlp'
+
     let g:ctrlp_user_command = {
           \    'types': {
           \      1: [
@@ -64,6 +67,9 @@
           \    },
           \    'fallback': 'find %s -type f'
           \  }
+    " if executable('ag')
+    "   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+    " endif
 
 " AG aka The Silver Searcher
   Bundle 'rking/ag.vim.git'
