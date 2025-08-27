@@ -70,9 +70,14 @@
           \    },
           \    'fallback': 'find %s -type f'
           \  }
-    " if executable('ag')
-    "   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-    " endif
+    if executable('rg')
+      let g:ctrlp_user_command = '
+            \ rg %s --files --color=never --glob ""
+            \ | awk ''{ print length, $0 }''
+            \ | sort -n -s
+            \ | cut -d" " -f2-'
+      let g:ctrlp_use_caching = 0
+    endif
 
 " NERDTree for project drawer
   Bundle "scrooloose/nerdtree.git"
