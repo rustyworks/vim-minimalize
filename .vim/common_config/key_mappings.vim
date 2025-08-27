@@ -78,3 +78,6 @@
 
 " toggle fold (check general config fold)
   nmap <Leader>z :ToggleFolding<cr>
+
+" toggle context plugins
+  nmap <Leader>x :ContextToggle<cr>
