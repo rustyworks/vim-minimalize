@@ -15,6 +15,7 @@
   Bundle "wellle/context.vim"
   let g:context_enabled = 0
   let g:context_filetype_blacklist = []
+  nmap <Leader>x :ContextToggle<cr>
 
 " Alternative colorscheme
   Bundle "dracula/vim", { "name": "dracula" }
@@ -97,7 +98,7 @@
 
 " UndoTree
   Bundle "mbbill/undotree.git"
-    map <Leader>h :UndotreeToggle<CR>
+    map <Leader>u :UndotreeToggle<CR>
     if has("persistent_undo")
       set undodir=~/.undodir/
       " set undofile

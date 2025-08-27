@@ -33,12 +33,6 @@
 " select the lines which were just pasted
   nnoremap vv `[V`]
 
-" clean up trailing whitespace
-  map <Leader>c :StripTrailingWhitespaces<cr>
-
-" clean up carriage return (for wsl)
-  map <Leader>C :StripTrailingCarriageReturn<cr>
-
 " compress excess whitespace on current line
   map <Leader>e :s/\v(\S+)\s+/\1 /<cr>:nohl<cr>
 
@@ -66,11 +60,20 @@
 " change directory to current openfile
   nnoremap <leader>cd :cd %:p:h<CR>
 
-" get curent filepath
-  map <Leader>r :CopyCurrentFilePath<cr>
-
 " toggle spell checker
   nmap <Leader>s :set spell!<cr>
+
+
+" Functions related keymapping
+
+" clean up trailing whitespace
+  map <Leader>c :StripTrailingWhitespaces<cr>
+
+" clean up carriage return (for wsl)
+  map <Leader>C :StripTrailingCarriageReturn<cr>
+
+" get curent filepath
+  map <Leader>r :CopyCurrentFilePath<cr>
 
 " triggering auto complete while pressing tab on local file context
   inoremap <Tab> <C-R>=ContextCompletion()<CR>
@@ -78,6 +81,3 @@
 
 " toggle fold (check general config fold)
   nmap <Leader>z :ToggleFolding<cr>
-
-" toggle context plugins
-  nmap <Leader>x :ContextToggle<cr>
