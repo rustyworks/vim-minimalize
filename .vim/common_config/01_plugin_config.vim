@@ -9,6 +9,7 @@
   Bundle "tomtom/tcomment_vim.git"
   Bundle "tpope/vim-fugitive.git"
   Bundle "vim-scripts/matchit.zip"
+  Bundle "jremmen/vim-ripgrep"
 
 " Sticky context scroll
   Bundle "wellle/context.vim"
@@ -72,16 +73,6 @@
     " if executable('ag')
     "   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
     " endif
-
-" AG aka The Silver Searcher
-  Bundle 'rking/ag.vim.git'
-    nmap g/ :Ag!<space>
-    nmap g* :Ag! -w <C-R><C-W><space>
-    nmap ga :AgAdd!<space>
-    nmap gn :cnext<CR>
-    nmap gp :cprev<CR>
-    nmap gq :ccl<CR>
-    nmap gl :cwindow<CR>
 
 " NERDTree for project drawer
   Bundle "scrooloose/nerdtree.git"
