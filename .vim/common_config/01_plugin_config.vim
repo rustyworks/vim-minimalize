@@ -31,7 +31,7 @@
         \'{':'}',
         \'{%':'%}',
         \}
-  " let g:AutoPairsOnlyWhitespace = 1  " https://github.com/jiangmiao/auto-pairs/pull/120/files
+  let g:AutoPairsOnlyWhitespace = 1  " https://github.com/jiangmiao/auto-pairs/pull/120/files
 
 " Tagbar for navigation by tags using CTags
   Bundle "majutsushi/tagbar.git"
