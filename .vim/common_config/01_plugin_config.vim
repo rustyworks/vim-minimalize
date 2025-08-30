@@ -23,6 +23,10 @@
   let g:dracula_italic = 0
   let g:dracula_underline = 0
 
+  Bundle "crusoexia/vim-monokai"
+  let g:monokai_term_italic = 0
+  let g:monokai_gui_italic = 0
+
 " Autopairs
   Bundle "jiangmiao/auto-pairs"
   let g:AutoPairs = {
