@@ -3,7 +3,6 @@
 " #616060  " dark grey
 " #8f8f8f  " light grey
 " #f8f8f8  " very light grey (almost white)
-" #ff8ff8  " penk
 
 set background=dark
 
@@ -34,24 +33,24 @@ hi Folded          guifg=#404040    guibg=#616060    gui=NONE
 " - Window/Tab delimiters -
 " -------------------------
 hi VertSplit       guifg=#f8f8f8    guibg=#616060    gui=NONE
-hi ColorColumn     guifg=#404040    guibg=#ff8ff8    gui=NONE
-hi TabLine         guifg=#616060    guibg=#f8f8f8    gui=NONE
+hi ColorColumn     guifg=#404040    guibg=#f8f8f8    gui=NONE
+hi TabLine         guifg=#f8f8f8    guibg=#616060    gui=NONE
 hi TabLineFill     guifg=#404040    guibg=#616060    gui=NONE
-hi TabLineSel      guifg=#f8f8f8    guibg=#ff8ff8    gui=NONE
+hi TabLineSel      guifg=#616060    guibg=#f8f8f8    gui=NONE
 
 " -------------------------------
 " - File Navigation / Searching -
 " -------------------------------
 hi Directory       guifg=#f8f8f8    guibg=#616060    gui=NONE
-hi Search          guifg=#616060    guibg=#ff8ff8    gui=NONE
-hi IncSearch       guifg=#616060    guibg=#ff8ff8    gui=NONE
+hi Search          guifg=#616060    guibg=#f8f8f8    gui=NONE
+hi IncSearch       guifg=#616060    guibg=#f8f8f8    gui=NONE
 
 " -----------------
 " - Prompt/Status -
 " -----------------
-hi StatusLine      guifg=#404040    guibg=#f8f8f8    gui=NONE
-hi StatusLineNC    guifg=#f8f8f8    guibg=#616060    gui=NONE
-hi WildMenu        guifg=#ff8ff8    guibg=#616060    gui=NONE
+hi StatusLine      guifg=#f8f8f8    guibg=#616060    gui=NONE
+hi StatusLineNC    guifg=#f8f8f8    guibg=#f8f8f8    gui=NONE
+hi WildMenu        guifg=NONE       guibg=#616060    gui=NONE
 hi Question        guifg=#404040    guibg=#616060    gui=NONE
 hi Title           guifg=#f8f8f8    guibg=#616060    gui=NONE
 hi ModeMsg         guifg=#f8f8f8    guibg=#616060    gui=NONE
@@ -67,8 +66,8 @@ hi NonText         guifg=#f8f8f8    guibg=#616060    gui=NONE
 
 hi Todo            guifg=#8f8f8f    guibg=#f8f8f8    gui=NONE
 hi Underlined      guifg=#f8f8f8    guibg=#616060    gui=NONE
-hi Error           guifg=#ff8ff8    guibg=#616060    gui=NONE
-hi ErrorMsg        guifg=#ff8ff8    guibg=#616060    gui=NONE
+hi Error           guifg=#404040    guibg=#f8f8f8    gui=NONE
+hi ErrorMsg        guifg=#404040    guibg=#f8f8f8    gui=NONE
 hi WarningMsg      guifg=#f8f8f8    guibg=#616060    gui=NONE
 hi Ignore          guifg=#f8f8f8    guibg=#616060    gui=NONE
 hi SpecialKey      guifg=#f8f8f8    guibg=#616060    gui=NONE
@@ -134,14 +133,14 @@ hi DiffText        guifg=#f8f8f8    guibg=#616060    gui=NONE
 " Completion menu
 " --------------------------------
 hi Pmenu           guifg=#8f8f8f    guibg=#404040    gui=NONE
-hi PmenuSel        guifg=#f8f8f8    guibg=#ff8ff8    gui=NONE
+hi PmenuSel        guifg=#f8f8f8    guibg=#404040    gui=NONE
 hi PmenuSbar       guifg=#8f8f8f    guibg=#616060    gui=NONE
 hi PmenuThumb      guifg=#8f8f8f    guibg=#616060    gui=NONE
 
 " --------------------------------
 " Spelling
 " --------------------------------
-hi SpellBad        guifg=#ff8ff8    guibg=NONE       gui=NONE
+hi SpellBad        guifg=#404040    guibg=#f8f8f8       gui=NONE
 hi SpellCap        guifg=NONE       guibg=NONE       gui=NONE
 hi SpellLocal      guifg=NONE       guibg=NONE       gui=NONE
 hi SpellRare       guifg=NONE       guibg=NONE       gui=NONE
