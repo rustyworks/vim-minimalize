@@ -59,7 +59,7 @@ hi MoreMsg         guifg=#f8f8f8    guibg=#616060    gui=NONE
 " --------------
 " - Visual aid -
 " --------------
-hi MatchParen      guifg=#f8f8f8    guibg=NONE       gui=NONE    cterm=underline
+hi MatchParen      guifg=#f8f8f8    guibg=NONE       gui=NONE
 hi Visual          guifg=#f8f8f8    guibg=#404040    gui=NONE
 hi VisualNOS       guifg=#f8f8f8    guibg=#404040    gui=NONE
 hi NonText         guifg=#f8f8f8    guibg=#616060    gui=NONE
