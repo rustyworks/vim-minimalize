@@ -49,7 +49,7 @@ hi IncSearch       guifg=#616060    guibg=#f8f8f8    gui=NONE
 " - Prompt/Status -
 " -----------------
 hi StatusLine      guifg=#f8f8f8    guibg=#616060    gui=NONE
-hi StatusLineNC    guifg=#f8f8f8    guibg=#f8f8f8    gui=NONE
+hi StatusLineNC    guifg=#f8f8f8    guibg=#8f8f8f    gui=NONE
 hi WildMenu        guifg=NONE       guibg=#616060    gui=NONE
 hi Question        guifg=#404040    guibg=#616060    gui=NONE
 hi Title           guifg=#f8f8f8    guibg=#616060    gui=NONE
