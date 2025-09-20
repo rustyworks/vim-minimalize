@@ -3,8 +3,7 @@
  call vundle#rc()
 
 " Plugins requiring no additional configuration or keymaps
-  Bundle "Vimjas/vim-python-pep8-indent"
-  Bundle "leafgarland/typescript-vim"
+  Bundle "sheerun/vim-polyglot"
   Bundle "terryma/vim-multiple-cursors"
   Bundle "tomtom/tcomment_vim.git"
   Bundle "tpope/vim-fugitive.git"
@@ -22,10 +21,6 @@
   let g:dracula_bold = 0
   let g:dracula_italic = 0
   let g:dracula_underline = 0
-
-  Bundle "crusoexia/vim-monokai"
-  let g:monokai_term_italic = 0
-  let g:monokai_gui_italic = 0
 
 " Autopairs
   Bundle "jiangmiao/auto-pairs"
@@ -107,25 +102,6 @@
       set undodir=~/.undodir/
       " set undofile
     endif
-
-" Better syntax highlighting for Python
-  Bundle "vim-python/python-syntax"
-  let g:python_highlight_all = 1
-  " Need to do workaround for it
-  let g:python_highlight_type_annotations = 1
-  let g:python_highlight_func_calls = 1
-  let g:python_highlight_type_annotations_regex = 0
-
-" Distraction free
-  Bundle "junegunn/limelight.vim"
-  let g:limelight_priority = -1 "highlight search
-  let g:limelight_default_coefficient = 0.8
-  " Number of preceding/following paragraphs to include (default: 0)
-  " let g:limelight_paragraph_span = 1
-
-" Make js, ts, jsx, tsx to typescriptreact
-  Bundle "peitalin/vim-jsx-typescript"
-  autocmd BufNewFile,BufRead *.js,*.ts,*.tsx,*.jsx set filetype=typescriptreact
 
 " Make all html, htm, nunjucks, nunjs, njk into jinja
   Bundle "Glench/Vim-Jinja2-Syntax"
