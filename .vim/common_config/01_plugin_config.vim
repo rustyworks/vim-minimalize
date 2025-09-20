@@ -82,7 +82,7 @@
     endif
 
 " NERDTree for project drawer
-  Bundle "scrooloose/nerdtree.git"
+  Bundle "preservim/nerdtree"
     let NERDTreeHijackNetrw = 0
     " Let unused file not shown in NERDTree
     let NERDTreeIgnore = [
