@@ -55,6 +55,7 @@
     let g:ctrlp_clear_cache_on_exit = 1
     let g:ctrlp_cache_dir = '/tmp/ctrlp'
 
+    let g:ctrlp_lazy_update = 1
     let g:ctrlp_user_command = {
           \    'types': {
           \      1: [
