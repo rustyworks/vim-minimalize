@@ -2,13 +2,6 @@
   nmap <Leader>w :set wrap!<cr>
   nmap <Leader>W :set nowrap<cr>
 
-" go to the alternate file (previous buffer) with g-enter
-  nmap g 
-
-" insert blank lines without going into insert mode
-  nmap go o<esc>
-  nmap gO O<esc>
-
 " mapping the jumping between splits. Hold control while using vim nav.
   nmap <C-J> <C-W>j
   nmap <C-K> <C-W>k
@@ -27,14 +20,8 @@
   noremap <Leader>9 9gt
   noremap <Leader>0 :tablast<cr>
 
-" Yank from the cursor to the end of the line, to be consistent with C and D.
-  nnoremap Y y$
-
 " select the lines which were just pasted
   nnoremap vv `[V`]
-
-" compress excess whitespace on current line
-  map <Leader>e :s/\v(\S+)\s+/\1 /<cr>:nohl<cr>
 
 " delete all buffers
   map <Leader>d :bufdo bd<cr>
@@ -51,9 +38,6 @@
 " reindent the entire file
   map <Leader>I gg=G``<cr>
 
-" insert the path of currently edited file into a command
-  cmap <C-S-P> <C-R>=expand("%:p:h") . "/" <cr>
-
 " disable left-click to prevent accidentally click when using touchpad
   map <LeftMouse> <Nop>
 
@@ -61,19 +45,19 @@
   nnoremap <leader>cd :cd %:p:h<CR>
 
 " toggle spell checker
-  nmap <Leader>s :set spell!<cr>
+  nnoremap <Leader>s :set spell!<cr>
 
 
 " Functions related keymapping
 
 " clean up trailing whitespace
-  map <Leader>c :StripTrailingWhitespaces<cr>
+  nnoremap <Leader>c :StripTrailingWhitespaces<cr>
 
 " clean up carriage return (for wsl)
-  map <Leader>C :StripTrailingCarriageReturn<cr>
+  nnoremap <Leader>C :StripTrailingCarriageReturn<cr>
 
-" get curent filepath
-  map <Leader>r :CopyCurrentFilePath<cr>
+" get current filepath
+  nnoremap <Leader>r :CopyCurrentFilePath<cr>
 
 " triggering auto complete while pressing tab on local file context
   inoremap <Tab> <C-R>=ContextCompletion()<CR>
