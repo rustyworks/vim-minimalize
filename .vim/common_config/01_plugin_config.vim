@@ -22,16 +22,6 @@
   let g:dracula_italic = 0
   let g:dracula_underline = 0
 
-" Autopairs
-  Bundle "jiangmiao/auto-pairs"
-  let g:AutoPairs = {
-        \'(':')',
-        \'[':']',
-        \'{':'}',
-        \'{%':'%}',
-        \}
-  let g:AutoPairsOnlyWhitespace = 1  " https://github.com/jiangmiao/auto-pairs/pull/120/files
-
 " Tagbar for navigation by tags using CTags
   Bundle "majutsushi/tagbar.git"
     let g:tagbar_autofocus = 1
