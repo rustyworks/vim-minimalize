@@ -72,6 +72,29 @@
       let g:ctrlp_use_caching = 0
     endif
 
+" FZF Better than CtrlP
+  Bundle "junegunn/fzf.vim.git"
+  " use fzf if FZF present, else CtrlP
+  if executable("fzf")
+    " Use this when you use apt
+    source /usr/share/doc/fzf/examples/fzf.vim
+    set rtp+=/usr/bin/fzf
+
+    " Use this if you clone
+    " set rtp+=~/.fzf
+
+    " Docking to bottom instead of floating on neovim
+    let g:fzf_layout = { 'down': '~40%' }
+
+    if executable("rg")
+      " Respect .gitignore file with dependency 'rg'
+      let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --glob "!.git/*"'
+    endif
+    nnoremap <Leader>t :<C-U>FZF<CR>
+  else
+    nnoremap <Leader>t :<C-U>CtrlP<CR>
+  endif
+
 " NERDTree for project drawer
   Bundle "preservim/nerdtree"
     let NERDTreeHijackNetrw = 0

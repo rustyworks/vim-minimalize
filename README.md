@@ -12,6 +12,7 @@
 ## Needed 3rd party
 1. ripgrep (apt install ripgrep)
 2. ctags (apt install universal-ctags)
+3. fzf (apt install fzf)
 
 ## Key mappings - leader = '\\'
 
