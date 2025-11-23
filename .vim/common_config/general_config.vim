@@ -39,7 +39,11 @@
   set hlsearch
 
 " searching is case insensitive when all lowercase
+" to enforce search, use \C when searching
   " set ignorecase smartcase
+
+" remove smartcase by default
+  set noignorecase nosmartcase
 
 " assume the /g flag on substitutions to replace all matches in a line
   set gdefault
