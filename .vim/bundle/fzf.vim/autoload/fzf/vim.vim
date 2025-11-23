@@ -320,7 +320,7 @@ function! s:buflisted()
 endfunction
 
 function! s:fzf(name, opts, extra)
-  call s:check_requirements()
+  " call s:check_requirements()
 
   let [extra, bang] = [{}, 0]
   if len(a:extra) <= 1
