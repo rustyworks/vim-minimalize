@@ -85,3 +85,18 @@ function! <SID>ToggleFolding()
   echo b:fold_all
 endfunction
 command! ToggleFolding call <SID>ToggleFolding()
+
+function! VimGrep(term, ...)
+    let search_path = a:0 > 0 ? a:1 : '**/*'
+    if search_path !~ '[?*{[]' && isdirectory(search_path)
+        let search_path = search_path . '**/*'
+    endif
+    silent execute 'vimgrep /' . a:term . '/j ' . search_path
+    if len(getqflist()) > 0
+        copen
+    else
+        echo "No matches found for: " . a:term . " in " . search_path
+        cclose
+    endif
+endfunction
+command! -nargs=+ -complete=file Grep call VimGrep(<f-args>)

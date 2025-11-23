@@ -10,9 +10,9 @@
 2. `:BundleInstall`
 
 ## Needed 3rd party
-1. ripgrep (apt install ripgrep)
+1. ripgrep (apt install ripgrep) - not mandatory, already have `Grep` function
 2. ctags (apt install universal-ctags)
-3. fzf (apt install fzf)
+3. fzf (apt install fzf) - not mandatory, ctrl-p will be the fallback
 
 ## Key mappings - leader = '\\'
 
