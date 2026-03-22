@@ -114,7 +114,6 @@
     map <Leader>u :UndotreeToggle<CR>
     if has("persistent_undo")
       set undodir=~/.undodir/
-      " set undofile
     endif
 
 " Make all html, htm, nunjucks, nunjs, njk into jinja
